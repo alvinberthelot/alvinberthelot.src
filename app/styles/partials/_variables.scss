@@ -32,7 +32,7 @@ $color-second-darkest: darken($color-second, 33%);
 $color-bg: $color-white;
 $color-bg-inverse: $color-gray-darkest;
 
-$color-text: $color-gray-lighter;
+$color-text: $color-gray-darker;
 $color-text-inverse: $color-white;
 $color-text-focus: $color-first;
 
@@ -47,8 +47,8 @@ $font-icon-1: 'streamline';
 $font-icon-2: 'FontAwesome';
 
 $screen-s: 480px;
-$screen-m: 768px;
-$screen-l: 960px;
+$screen-m: 600px;
+$screen-l: 768px;
 // $screen-l: 1024px;
 
 $gutter-height: 16px;

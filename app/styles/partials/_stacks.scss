@@ -1,0 +1,46 @@
+#stacks {
+
+  background: $color-first-annex;
+  border: 1px solid $color-first-annex;
+
+  h3 {
+    color: white;
+  }
+
+  .stack-specific {
+    background: $color-first;
+    color: white;
+    padding: 0;
+  }
+  .row.stack-specific {
+    background: $color-first;
+    // padding: 0 24px;
+  }
+
+  .stack-show {
+    text-align: right;
+    font-size: 48px;
+  }
+
+  .row {
+    // background: $color-first-annex;
+    // background: cyan;
+    // background: $color-first;
+    background: white;
+    // margin: 8px;
+    padding: 16px 0;
+
+    @include mq(medium) {
+      // margin: 24px;
+      padding: 24px;
+    }
+  }
+
+  ul.list-ability {
+    background: white;
+    li {
+      padding: 4px 0;
+    }
+  }
+
+}

@@ -4,16 +4,16 @@
 Custom Fonts
 ---------------------------------------------------------------*/
 
-// @font-face {
-//     font-family: 'raleway';
-//     src: url('fonts/raleway/raleway_thin-webfont.eot');
-//     src: url('fonts/raleway/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
-//          // url('fonts/raleway/raleway_thin-webfont.woff') format('woff'),
-//          // url('fonts/raleway/raleway_thin-webfont.ttf') format('truetype'),
-//          url('fonts/raleway/raleway_thin-webfont.svg#raleway') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+  font-family: "webyousoon";
+  src:url("fonts/fontastic/webyousoon.eot");
+  src:url("fonts/fontastic/webyousoon.eot?#iefix") format("embedded-opentype"),
+    url("fonts/fontastic/webyousoon.woff") format("woff"),
+    url("fonts/fontastic/webyousoon.ttf") format("truetype"),
+    url("fonts/fontastic/webyousoon.svg#webyousoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'raleway';

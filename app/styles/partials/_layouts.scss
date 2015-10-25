@@ -55,8 +55,7 @@
 
 @include mq(large) {
   .wrapper {
-    margin: $gutter-width-xl auto $gutter-width-m auto;
-    // width: 960px;
+    margin: 0 auto $gutter-width-m auto;
   }
 
   .col-single {
@@ -77,8 +76,7 @@
 
 @include mq(xlarge) {
   .wrapper {
-    // margin: auto;
-    width: 960px;
+    width: $max-width-screen;
   }
 
   .col-single {
