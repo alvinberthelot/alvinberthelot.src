@@ -56,7 +56,13 @@ $icon-list: (
   ("mark-top", "V"),
   ("mark-bottom", "W"),
   ("mark-left", "X"),
-  ("mark-right", "Y")
+  ("mark-right", "Y"),
+  ("pen", "Z"),
+  ("write-pen", "0"),
+  ("keyboard", "1"),
+  ("cli", "2"),
+  ("cursor", "3"),
+  ("settings", "4")
 );
 
 @each $name, $content in $icon-list {
