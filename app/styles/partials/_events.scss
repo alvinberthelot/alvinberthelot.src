@@ -25,4 +25,10 @@
       padding-top: 8px;
     }
   }
+
+  .row + .row{
+    @include mq(small) {
+      padding-top: 0;
+    }
+  }
 }
