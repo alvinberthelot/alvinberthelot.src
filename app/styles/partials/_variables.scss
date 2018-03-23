@@ -1,25 +1,24 @@
-
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-black: #000000;
 
-$color-gray-lightest: #E0E0E0;
+$color-near-white: whitesmoke;
+
+$color-gray-lightest: #e0e0e0;
 $color-gray-lighter: #757575;
 $color-gray-medium: #616161;
 $color-gray-darker: #424242;
 $color-gray-darkest: #212121;
 
-
-$color-purple: #4A148C;
-$color-blue: #4A90E2;
-$color-orange: #FFC107;
-$color-yellow: #F8E71C;
-$color-cyan: #00BCD4;
-$color-cyan-darken: #124A60;
+$color-purple: #4a148c;
+$color-blue: #4a90e2;
+$color-orange: #ffc107;
+$color-yellow: #f8e71c;
+$color-cyan: #00bcd4;
+$color-cyan-darken: #124a60;
 // $color-cyan-darken: #0079A9;
 
-$color-red: #D0021B;
+$color-red: #d0021b;
 $color-red-darken: darken($color-red, 10%);
-
 
 $color-first: $color-cyan;
 // $color-first-annex: darken($color-first, 10%);
@@ -39,12 +38,27 @@ $color-text-focus: $color-first;
 $opacity-background: 0.8;
 $opacity-background-low: 0.4;
 
-$font-text: 'raleway', Helvetica, Arial, sans-serif;
-$font-title: 'raleway-bold', Helvetica, Arial, sans-serif;
-$font-bold: 'raleway-bold', Helvetica, Arial, sans-serif;
-$font-handwriting: 'fabfeltscriptbold', 'raleway-bold';
-$font-icon-1: 'streamline';
-$font-icon-2: 'FontAwesome';
+$font-text: "raleway", Helvetica, Arial, sans-serif;
+$font-title: "raleway-bold", Helvetica, Arial, sans-serif;
+$font-bold: "raleway-bold", Helvetica, Arial, sans-serif;
+$font-handwriting: "fabfeltscriptbold", "raleway-bold";
+$font-code: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$font-icon-1: "streamline";
+$font-icon-2: "FontAwesome";
+
+// font-size
+$font-size-base-s: 16px;
+$font-size-base-m: 16px;
+$font-size-base-l: 14px;
+$font-size-base-xl: 14px;
+//
+$font-size-shortcut: 30px;
+
+// line-height
+$line-height-s: 1.5;
+$line-height-m: 1.5;
+$line-height-l: 1.65;
+$line-height-xl: 1.65;
 
 $screen-s: 480px;
 $screen-m: 600px;
@@ -68,6 +82,5 @@ $max-height-screen: $max-width-screen * 9 / 16;
 
 $max-width-col: $max-width-screen / 3 - 2 * $gutter-width-s;
 $max-height-col: $max-width-col * 9 / 16;
-
 
 $path-img: "../img";

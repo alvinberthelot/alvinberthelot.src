@@ -23,13 +23,14 @@ var paths = {
   html: {
     src: [
       basePaths.src + 'assets/html/header.html',
-      basePaths.src + 'assets/html/job-title.html',
-      basePaths.src + 'assets/html/skills.html',
-      basePaths.src + 'assets/html/stacks.html',
-      basePaths.src + 'assets/html/training.html',
-      basePaths.src + 'assets/html/langages.html',
-      basePaths.src + 'assets/html/experience.html',
-      basePaths.src + 'assets/html/events.html',
+      basePaths.src + 'assets/html/index.html',
+      // basePaths.src + 'assets/html/job-title.html',
+      // basePaths.src + 'assets/html/skills.html',
+      // basePaths.src + 'assets/html/stacks.html',
+      // basePaths.src + 'assets/html/training.html',
+      // basePaths.src + 'assets/html/langages.html',
+      // basePaths.src + 'assets/html/experience.html',
+      // basePaths.src + 'assets/html/events.html',
       basePaths.src + 'assets/html/footer.html'
     ],
     dest: basePaths.dest
@@ -66,7 +67,7 @@ gulp.task('clean', function (cb) {
 // SRC TASKS
 // ******************************************
 
-gulp.task('js', function() {
+gulp.task('js', function () {
   gulp.src(paths.scripts.src)
     .pipe($.concat('app.js'))
     // delete console/alert/debug into JS files
@@ -80,7 +81,7 @@ gulp.task('js', function() {
       $.rename('app.min.js'))
     )
     .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('css', function () {
@@ -100,19 +101,19 @@ gulp.task('css', function () {
       $.rename('app.min.css'))
     )
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
   return gulp.src(paths.html.src)
-    .pipe($.order(paths.html.src, {base: '.'}))
+    .pipe($.order(paths.html.src, { base: '.' }))
     .pipe($.concat('index.html'))
-    .pipe($.preprocess({context: {NODE_ENV: production?'production':''}}))
+    .pipe($.preprocess({ context: { NODE_ENV: production ? 'production' : '' } }))
     .pipe($.if(production,
-      $.htmlmin({collapseWhitespace: true}))
+      $.htmlmin({ collapseWhitespace: true }))
     )
     .pipe(gulp.dest(paths.html.dest))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('image-min', [], function () {
@@ -120,9 +121,9 @@ gulp.task('image-min', [], function () {
     .pipe($.if(production,
       $.imagemin({
         progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
+        svgoPlugins: [{ removeViewBox: false }],
         use: [pngquant()]
-    })))
+      })))
     .pipe(gulp.dest(paths.images.dest));
 });
 
@@ -130,7 +131,7 @@ gulp.task('image-min', [], function () {
 // DEST TASKS
 // ******************************************
 
-gulp.task('tag', ['html'], function() {
+gulp.task('tag', ['html'], function () {
   return gulp.src(paths.html.dest + '*.html')
     .pipe($.replace(/vx.x.x/g, pjson.version))
     .pipe(gulp.dest(paths.html.dest));
@@ -140,21 +141,21 @@ gulp.task('tag', ['html'], function() {
 // COPY TASKS
 // ******************************************
 
-gulp.task('copy-fonts', [], function() {
+gulp.task('copy-fonts', [], function () {
   return gulp.src(['./app/assets/css/fonts/**'])
     .pipe(gulp.dest(basePaths.dest + 'css/fonts'));
 });
 
-gulp.task('copy-icons', [], function() {
+gulp.task('copy-icons', [], function () {
   return gulp.src(['./app/assets/icons/**'])
     .pipe(gulp.dest(basePaths.dest));
 });
 
 gulp.task('copy-extras', function () {
   return gulp.src([
-      './app/assets/*.*',
-      './app/assets/CNAME',
-      '!' + paths.html.src], {dot: true})
+    './app/assets/*.*',
+    './app/assets/CNAME',
+    '!' + paths.html.src], { dot: true })
     .pipe(gulp.dest(basePaths.dest));
 });
 
@@ -162,13 +163,13 @@ gulp.task('copy-extras', function () {
 gulp.task('sitemap', function () {
   return gulp.src(paths.html.src)
     .pipe($.sitemap({
-        siteUrl: 'http://alvin.berthelot.rocks',
-        mappings: [{
-          pages: ['*.html'],
-          changefreq: 'monthly',
-          priority: 1,
-          lastmod: Date.now()
-        }]
+      siteUrl: 'http://alvin.berthelot.rocks',
+      mappings: [{
+        pages: ['*.html'],
+        changefreq: 'monthly',
+        priority: 1,
+        lastmod: Date.now()
+      }]
     }))
     .pipe(gulp.dest(basePaths.dest));
 });
@@ -178,16 +179,16 @@ gulp.task('sitemap', function () {
 // ******************************************
 
 // Static server
-gulp.task('serve', ['build'], function() {
-    browserSync({
-        server: {
-            baseDir: basePaths.dest
-        }
-    });
+gulp.task('serve', ['build'], function () {
+  browserSync({
+    server: {
+      baseDir: basePaths.dest
+    }
+  });
 
-    gulp.watch(paths.html.src, ['html']);
-    gulp.watch(paths.styles.src, ['css']);
-    gulp.watch(paths.scripts.src, ['js']);
+  gulp.watch(paths.html.src, ['html']);
+  gulp.watch(paths.styles.src, ['css']);
+  gulp.watch(paths.scripts.src, ['js']);
 });
 
 // ******************************************

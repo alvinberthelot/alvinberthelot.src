@@ -1,3 +1,5 @@
+// Bye bye encoding issues
+@charset 'utf-8';
 
 @import "partials/reset";
 
@@ -8,7 +10,7 @@
 @import "partials/fonts";
 @import "partials/icons";
 @import "partials/layouts";
-
+@import "partials/typo";
 @import "partials/jobtitle";
 @import "partials/skills";
 @import "partials/stacks";
@@ -16,7 +18,6 @@
 @import "partials/langages";
 @import "partials/experience";
 @import "partials/events";
-
 
 body {
   background: $color-white;
@@ -45,7 +46,11 @@ a {
   }
 }
 
-.h1, .h2, .h3, .h4, .h5 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
   font-family: $font-title;
 }
 
@@ -56,7 +61,6 @@ a {
   line-height: 40px;
   padding: 60px 40px;
   text-align: center;
-
 }
 
 .h2 {
@@ -111,14 +115,10 @@ a {
   }
 }
 
-
-
-
 [class^="ability-score"],
 [class*=" ability-score"] {
   float: right;
 }
-
 
 [class^="ability-score"]:before,
 [class*=" ability-score"]:before,
@@ -134,7 +134,6 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 .ability-score-1 {
   &::before {
@@ -196,8 +195,6 @@ a {
   }
 }
 
-
-
 ul.list-unstyled {
   list-style: none;
   padding: 0;
@@ -236,12 +233,146 @@ b {
   margin: 0 auto;
 }
 
-
-
 .row + .row {
   padding-top: 60px;
 }
 
+a {
+  color: $color-first;
+  font-family: $font-title;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+  word-wrap: break-word;
+  &:hover {
+    color: $color-first-annex;
+  }
+}
 
+b {
+  font-family: $font-bold;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+}
 
+li i + span {
+  line-height: 32px;
+  vertical-align: super;
+  padding-left: 6px;
+}
+
+ul.contact li + li {
+  margin-top: 24px;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.handwriting {
+  font-family: $font-handwriting;
+  -webkit-font-smoothing: antialiased;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.icon-inverse {
+  transform: rotate(90deg);
+}
+
+.board {
+  padding-bottom: $gutter-height-l;
+  padding-top: $gutter-height-l;
+}
+
+.title-focus {
+  color: $color-gray-lightest;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bigger {
+  i {
+    font-size: 24px;
+  }
+  font-size: 16px;
+}
+
+.board {
+  .info,
+  .post {
+    margin-top: $gutter-height-l;
+  }
+  .vignette {
+    margin-bottom: $gutter-height-m;
+  }
+  header {
+    position: relative;
+  }
+  header > i {
+    color: $color-gray-lightest;
+    font-size: 48px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+  }
+  h1 {
+    color: $color-gray-lightest;
+    font-size: 36px;
+    margin-bottom: $gutter-height-m;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h2 {
+    border-bottom: 1px solid $color-first;
+    color: $color-gray-darker;
+    font-size: 24px;
+    margin-bottom: $gutter-height-s;
+    padding-bottom: $gutter-height-s;
+    padding-top: $gutter-height-s;
+  }
+}
+@include mq(large) {
+  .board {
+    .info,
+    .post {
+      margin-top: 0;
+    }
+  }
+}
+
+.focus,
+.focus-inverse {
+  font-size: 18px;
+  line-height: 26px;
+}
+.focus {
+  color: $color-first;
+}
+.focus-inverse {
+  color: $color-white;
+}
+
+.container {
+  background: $color-bg;
+  color: $color-text;
+}
+
+.container-inverse {
+  background: $color-bg-inverse;
+  color: $color-text-inverse;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
