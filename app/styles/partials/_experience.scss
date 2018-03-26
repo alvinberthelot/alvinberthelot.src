@@ -1,11 +1,8 @@
 #experience {
-
   background: whitesmoke;
   padding: 1px 0;
 
-
   .mission {
-    
     p + p,
     p + ul,
     ul + p {
@@ -35,7 +32,6 @@
     }
   }
 
-
   .customer {
     border-bottom: 2px solid $color-first;
     color: $color-gray-darkest;
@@ -56,7 +52,6 @@
 
   .place,
   .date {
-
     padding-top: 0;
 
     @include mq(large) {
@@ -78,13 +73,13 @@
 
   .place {
     &::before {
-      content: "P";
+      content: 'P';
     }
   }
 
   .date {
     &::before {
-      content: "Q";
+      content: 'Q';
     }
   }
 

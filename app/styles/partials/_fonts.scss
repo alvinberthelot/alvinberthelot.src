@@ -5,12 +5,10 @@ Custom Fonts
 ---------------------------------------------------------------*/
 
 @font-face {
-  font-family: "webyousoon";
-  src:url("fonts/fontastic/webyousoon.eot");
-  src:url("fonts/fontastic/webyousoon.eot?#iefix") format("embedded-opentype"),
-    url("fonts/fontastic/webyousoon.woff") format("woff"),
-    url("fonts/fontastic/webyousoon.ttf") format("truetype"),
-    url("fonts/fontastic/webyousoon.svg#webyousoon") format("svg");
+  font-family: 'webyousoon';
+  src: url('fonts/fontastic/webyousoon.eot');
+  src: url('fonts/fontastic/webyousoon.eot?#iefix') format('embedded-opentype'), url('fonts/fontastic/webyousoon.woff') format('woff'),
+    url('fonts/fontastic/webyousoon.ttf') format('truetype'), url('fonts/fontastic/webyousoon.svg#webyousoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,11 +32,9 @@ Custom Fonts
   src: url('fonts/fabfelt/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
   // src: url('fonts/fabfelt/fabfeltscript-bold.eot');
   src: url('fonts/fabfelt/fabfeltscript-bold.eot?#iefix') format('embedded-opentype'),
-       url('fonts/fabfelt/fabfeltscript-bold.woff2') format('woff2'),
-       url('fonts/fabfelt/fabfeltscript-bold.woff') format('woff'),
-       url('fonts/fabfelt/fabfeltscript-bold.ttf') format('truetype'),
-       url('fonts/fabfelt/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
+    url('fonts/fabfelt/fabfeltscript-bold.woff2') format('woff2'), url('fonts/fabfelt/fabfeltscript-bold.woff') format('woff'),
+    url('fonts/fabfelt/fabfeltscript-bold.ttf') format('truetype'),
+    url('fonts/fabfelt/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
- 

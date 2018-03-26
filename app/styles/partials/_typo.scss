@@ -92,8 +92,8 @@ code {
 
   font-family: $font-code;
 
-  &[class^="code-type-"],
-  &[class*=" code-type-"] {
+  &[class^='code-type-'],
+  &[class*=' code-type-'] {
     $size-icon-code: 24px;
     $margin-icon-size: 1.5 * $size-icon-code;
 
@@ -118,22 +118,22 @@ code {
   &.code-type-shortcut {
     font-size: $font-size-shortcut;
     &::before {
-      content: "1";
+      content: '1';
     }
   }
   &.code-type-cli {
     &::before {
-      content: "2";
+      content: '2';
     }
   }
   &.code-type-ui-menu {
     &::before {
-      content: "3";
+      content: '3';
     }
   }
   &.code-type-settings {
     &::before {
-      content: "4";
+      content: '4';
     }
   }
 }

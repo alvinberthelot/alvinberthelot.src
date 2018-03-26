@@ -1,23 +1,23 @@
 // Bye bye encoding issues
 @charset 'utf-8';
 
-@import "partials/reset";
+@import 'partials/reset';
 
-@import "partials/variables";
-@import "partials/functions";
-@import "partials/mixins";
-@import "partials/placeholders";
-@import "partials/fonts";
-@import "partials/icons";
-@import "partials/layouts";
-@import "partials/typo";
-@import "partials/jobtitle";
-@import "partials/skills";
-@import "partials/stacks";
-@import "partials/training";
-@import "partials/langages";
-@import "partials/experience";
-@import "partials/events";
+@import 'partials/variables';
+@import 'partials/functions';
+@import 'partials/mixins';
+@import 'partials/placeholders';
+@import 'partials/fonts';
+@import 'partials/icons';
+@import 'partials/layouts';
+@import 'partials/typo';
+@import 'partials/jobtitle';
+@import 'partials/skills';
+@import 'partials/stacks';
+@import 'partials/training';
+@import 'partials/langages';
+@import 'partials/experience';
+@import 'partials/events';
 
 body {
   background: $color-white;
@@ -115,16 +115,16 @@ a {
   }
 }
 
-[class^="ability-score"],
-[class*=" ability-score"] {
+[class^='ability-score'],
+[class*=' ability-score'] {
   float: right;
 }
 
-[class^="ability-score"]:before,
-[class*=" ability-score"]:before,
-[class^="ability-score"]:after,
-[class*=" ability-score"]:after {
-  font-family: "webyousoon" !important;
+[class^='ability-score']:before,
+[class*=' ability-score']:before,
+[class^='ability-score']:after,
+[class*=' ability-score']:after {
+  font-family: 'webyousoon' !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -138,12 +138,12 @@ a {
 .ability-score-1 {
   &::before {
     color: $color-first;
-    content: "I";
+    content: 'I';
     letter-spacing: 3px;
   }
   &::after {
     color: $color-gray-lightest;
-    content: "IIII";
+    content: 'IIII';
     letter-spacing: 3px;
   }
 }
@@ -151,12 +151,12 @@ a {
 .ability-score-2 {
   &::before {
     color: $color-first;
-    content: "II";
+    content: 'II';
     letter-spacing: 3px;
   }
   &::after {
     color: $color-gray-lightest;
-    content: "III";
+    content: 'III';
     letter-spacing: 3px;
   }
 }
@@ -164,12 +164,12 @@ a {
 .ability-score-3 {
   &::before {
     color: $color-first;
-    content: "III";
+    content: 'III';
     letter-spacing: 3px;
   }
   &::after {
     color: $color-gray-lightest;
-    content: "II";
+    content: 'II';
     letter-spacing: 3px;
   }
 }
@@ -177,12 +177,12 @@ a {
 .ability-score-4 {
   &::before {
     color: $color-first;
-    content: "IIII";
+    content: 'IIII';
     letter-spacing: 3px;
   }
   &::after {
     color: $color-gray-lightest;
-    content: "I";
+    content: 'I';
     letter-spacing: 3px;
   }
 }
@@ -190,7 +190,7 @@ a {
 .ability-score-5 {
   &::before {
     color: $color-first;
-    content: "IIIII";
+    content: 'IIIII';
     letter-spacing: 3px;
   }
 }

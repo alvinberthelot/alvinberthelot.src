@@ -38,13 +38,13 @@ $color-text-focus: $color-first;
 $opacity-background: 0.8;
 $opacity-background-low: 0.4;
 
-$font-text: "raleway", Helvetica, Arial, sans-serif;
-$font-title: "raleway-bold", Helvetica, Arial, sans-serif;
-$font-bold: "raleway-bold", Helvetica, Arial, sans-serif;
-$font-handwriting: "fabfeltscriptbold", "raleway-bold";
-$font-code: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-$font-icon-1: "streamline";
-$font-icon-2: "FontAwesome";
+$font-text: 'raleway', Helvetica, Arial, sans-serif;
+$font-title: 'raleway-bold', Helvetica, Arial, sans-serif;
+$font-bold: 'raleway-bold', Helvetica, Arial, sans-serif;
+$font-handwriting: 'fabfeltscriptbold', 'raleway-bold';
+$font-code: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$font-icon-1: 'streamline';
+$font-icon-2: 'FontAwesome';
 
 // font-size
 $font-size-base-s: 16px;
@@ -83,4 +83,4 @@ $max-height-screen: $max-width-screen * 9 / 16;
 $max-width-col: $max-width-screen / 3 - 2 * $gutter-width-s;
 $max-height-col: $max-width-col * 9 / 16;
 
-$path-img: "../img";
+$path-img: '../img';

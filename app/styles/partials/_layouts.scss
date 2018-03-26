@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -9,12 +11,11 @@
   *zoom: 1;
 }
 
-
 .col-single,
 .col-double,
 .col-full {
   padding-left: $gutter-width-s;
-  padding-right: $gutter-width-s; 
+  padding-right: $gutter-width-s;
   margin: 0;
 }
 
@@ -23,19 +24,19 @@
 //   width: 100%;
 // }
 
-[class^="col-"] > [class^="col-"] {
+[class^='col-'] > [class^='col-'] {
   padding-left: 0;
-  padding-right: 0; 
+  padding-right: 0;
 }
 
 @include mq(medium) {
   .col-double {
     padding-left: 0;
-    padding-right: 0; 
+    padding-right: 0;
   }
 
-  [class^="col-"] > .col-half,
-  [class^="col-"] > .col-full {
+  [class^='col-'] > .col-half,
+  [class^='col-'] > .col-full {
     padding-left: $gutter-width-s;
     padding-right: $gutter-width-s;
   }
@@ -69,7 +70,7 @@
 
   .col-half {
     padding-left: $gutter-width-s;
-    padding-right: $gutter-width-s; 
+    padding-right: $gutter-width-s;
     margin: 0;
   }
 }
