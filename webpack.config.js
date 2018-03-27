@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CnameWebpackPlugin = require('cname-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -72,6 +73,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'trainings.html',
       template: 'src/assets/html/trainings.html'
+    }),
+    new CnameWebpackPlugin({
+      domain: 'alvin.berthelot.rocks'
     })
   ]
 }
