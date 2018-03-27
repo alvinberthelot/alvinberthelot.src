@@ -1,4 +1,0 @@
-
-@function find-img($name-img, $suffix, $file) {
-  @return url("#{$path-img}/#{$name-img}#{$suffix}#{$file}");
-}

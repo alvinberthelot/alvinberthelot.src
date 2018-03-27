@@ -1,0 +1,14 @@
+#skills {
+  background: whitesmoke;
+  padding: 1px 0;
+
+  .row {
+    background: white;
+    margin: 8px;
+    padding: 16px 0;
+    @include mq(medium) {
+      margin: 24px;
+      padding: 24px;
+    }
+  }
+}
