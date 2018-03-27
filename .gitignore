@@ -26,4 +26,5 @@ node_modules/
 tmp/
 
 # Output folder.
+dist/
 alvinberthelot.github.io/
