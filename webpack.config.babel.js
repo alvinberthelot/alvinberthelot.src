@@ -2,6 +2,16 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
+// const SitemapPlugin = require('sitemap-webpack-plugin')
+import SitemapPlugin from 'sitemap-webpack-plugin'
+
+const paths = [
+  {
+    path: '/',
+    priority: '1',
+    changeFreq: 'monthly'
+  }
+]
 
 module.exports = {
   entry: './src/index.js',
@@ -76,6 +86,7 @@ module.exports = {
     }),
     new CnameWebpackPlugin({
       domain: 'alvin.berthelot.rocks'
-    })
+    }),
+    new SitemapPlugin('http://alvin.berthelot.rocks', paths)
   ]
 }
