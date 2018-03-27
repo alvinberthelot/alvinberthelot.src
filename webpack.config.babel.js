@@ -65,7 +65,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/assets/html/index.html'
+      template: 'src/index.hbs'
     }),
     new HtmlWebpackPlugin({
       filename: 'events.html',
