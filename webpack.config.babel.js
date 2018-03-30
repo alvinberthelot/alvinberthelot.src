@@ -68,28 +68,20 @@ module.exports = {
       template: 'src/index.hbs'
     }),
     new HtmlWebpackPlugin({
-      filename: 'events.html',
-      template: 'src/assets/html/events.html'
+      filename: 'blog.html',
+      template: 'src/blog.hbs'
     }),
     new HtmlWebpackPlugin({
-      filename: 'experiences.html',
-      template: 'src/assets/html/experiences.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'langages.html',
-      template: 'src/assets/html/langages.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'skills.html',
-      template: 'src/assets/html/skills.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'stacks.html',
-      template: 'src/assets/html/stacks.html'
+      filename: 'cv.html',
+      template: 'src/cv.hbs'
     }),
     new HtmlWebpackPlugin({
       filename: 'trainings.html',
-      template: 'src/assets/html/trainings.html'
+      template: 'src/trainings.hbs'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'events.html',
+      template: 'src/events.hbs'
     }),
     new CnameWebpackPlugin({
       domain: 'alvin.berthelot.rocks'

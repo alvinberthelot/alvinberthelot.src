@@ -62,11 +62,40 @@ $icon-list: (
   ('keyboard', '1'),
   ('cli', '2'),
   ('cursor', '3'),
-  ('settings', '4')
+  ('settings', '4'),
+  ('board', '5'),
+  ('books', '6'),
+  ('light-bulb', '7'),
+  ('goal', '8')
 );
 
 @each $name, $content in $icon-list {
   .icon-#{$name}::before {
     content: $content;
   }
+}
+
+.icon-rotate-90 {
+  transform: rotate(90deg);
+}
+.icon-rotate-180 {
+  transform: rotate(180deg);
+}
+.icon-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.icon-stacked {
+  position: relative;
+  > .icon {
+    position: relative;
+  }
+  > .icon + .icon {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.icon--size-xxl {
+  @include font-size(40px, $font-size-base);
 }

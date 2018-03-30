@@ -1,0 +1,12 @@
+.card {
+  .card--title {
+    color: red;
+    display: flex;
+    @include mq(medium) {
+      display: block;
+      text-align: center;
+    }
+  }
+  .card--content {
+  }
+}

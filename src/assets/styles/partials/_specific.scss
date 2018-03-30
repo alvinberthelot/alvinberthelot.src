@@ -1,0 +1,18 @@
+.picture-teaser {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-teaser {
+  font-family: $font-bold;
+  // position: absolute;
+  max-width: 100%;
+  width: 100%;
+  @include text(100px, $font-size-base, $line-height-xl);
+}
+
+#page-welcome {
+  position: relative;
+  // padding-top: 80px;
+}

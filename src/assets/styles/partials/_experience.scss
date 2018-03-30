@@ -33,7 +33,7 @@
   }
 
   .customer {
-    border-bottom: 2px solid $color-first;
+    border-bottom: 2px solid $color-primary;
     color: $color-gray-darkest;
     font-family: $font-title;
     font-size: 20px;
@@ -61,7 +61,7 @@
 
     &::before {
       @extend %font-icon;
-      color: $color-first;
+      color: $color-primary;
       padding-right: 4px;
       @include mq(large) {
         display: block;

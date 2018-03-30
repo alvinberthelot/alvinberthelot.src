@@ -1,18 +1,18 @@
 #stacks {
-  background: $color-first-annex;
-  border: 1px solid $color-first-annex;
+  background: $color-primary-darken;
+  border: 1px solid $color-primary-darken;
 
   h3 {
     color: white;
   }
 
   .stack-specific {
-    background: $color-first;
+    background: $color-primary;
     color: white;
     padding: 0;
   }
   .row.stack-specific {
-    background: $color-first;
+    background: $color-primary;
     // padding: 0 24px;
   }
 
@@ -22,9 +22,9 @@
   }
 
   .row {
-    // background: $color-first-annex;
+    // background: $color-primmary-darken;
     // background: cyan;
-    // background: $color-first;
+    // background: $color-primmary;
     background: white;
     // margin: 8px;
     padding: 16px 0;

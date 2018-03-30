@@ -2,15 +2,15 @@
 @charset 'utf-8';
 
 %basic-text {
-  @include text($font-size-base-s, $font-size-base-s, $line-height-s);
+  @include text($font-size-s, $font-size-base, $line-height-s);
   @include mq(m) {
-    @include text($font-size-base-m, $font-size-base-m, $line-height-m);
+    @include text($font-size-m, $font-size-base, $line-height-m);
   }
   @include mq(l) {
-    @include text($font-size-base-l, $font-size-base-l, $line-height-l);
+    @include text($font-size-l, $font-size-base, $line-height-l);
   }
   @include mq(xl) {
-    @include text($font-size-base-xl, $font-size-base-xl, $line-height-xl);
+    @include text($font-size-xl, $font-size-base, $line-height-xl);
   }
 }
 
@@ -27,18 +27,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* TITRES */
+p {
+  @extend %basic-text;
+}
+
+a {
+  color: $color-primary;
+  font-family: $font-text;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  word-wrap: break-word;
+  &:hover {
+    color: $color-primary-darken;
+  }
+}
+
+b {
+  font-family: $font-bold;
+}
+
+.hr--top {
+  border-top: 1px solid $color-gray-lightest;
+}
+
+.hr--bottom {
+  border-bottom: 1px solid $color-gray-lightest;
+}
+
+.center {
+  text-align: center;
+}
+
+/* TEXT */
+
+$text-font-sizes: (
+  xs: $font-size-xs,
+  s: $font-size-s,
+  m: $font-size-m,
+  l: $font-size-l,
+  xl: $font-size-xl,
+  xxl: $font-size-xxl
+);
+
+.text--light {
+  color: $color-gray-lighter;
+}
+
+.text--handwriting {
+  font-family: $font-handwriting;
+  -webkit-font-smoothing: antialiased;
+}
+
+@each $text-size, $font-size in $text-font-sizes {
+  .text--#{$text-size} {
+    @include font-size($font-size, $font-size-base);
+  }
+}
+
+/* TITLES */
 
 $small-baseline: 10px;
 $big-baseline: 20px;
 
-$titles-font-size: (
-  h1: 36px,
-  h2: 30px,
-  h3: 24px,
-  h4: 18px,
-  h5: 14px,
-  h6: 12px
+$title-font-sizes: (
+  h1: $font-size-xxl,
+  h2: $font-size-xl,
+  h3: $font-size-l,
+  h4: $font-size-m,
+  h5: $font-size-s,
+  h6: $font-size-xs
 );
 
 h1,
@@ -46,14 +103,30 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $color-text;
+  font-family: $font-text;
+}
+
+.h--bold {
   font-family: $font-title;
 }
 
-@each $title, $font-size in $titles-font-size {
+.h--page {
+  color: $color-gray-lightest;
+  text-transform: uppercase;
+}
+
+@each $title, $font-size in $title-font-sizes {
   #{$title},
   .#{$title} {
-    @include font-size($font-size, $font-size-base-s);
+    @include font-size($font-size, $font-size-base);
     @include mq(m) {
       @include font-size($font-size, $font-size-base-m);
     }
@@ -64,15 +137,15 @@ h6 {
       @include font-size($font-size, $font-size-base-xl);
     }
 
-    @include line-height($font-size, $font-size-base-s, 1);
+    @include line-height($font-size, $font-size-base, 1);
     @include mq(m) {
-      @include line-height($font-size, $font-size-base-m, 1);
+      @include line-height($font-size, $font-size-base, 1);
     }
     @include mq(l) {
-      @include line-height($font-size, $font-size-base-l, 1);
+      @include line-height($font-size, $font-size-base, 1);
     }
     @include mq(xl) {
-      @include line-height($font-size, $font-size-base-xl, 1);
+      @include line-height($font-size, $font-size-base, 1);
     }
   }
 }
@@ -97,10 +170,10 @@ code {
     $size-icon-code: 24px;
     $margin-icon-size: 1.5 * $size-icon-code;
 
-    background: lighten($color-second, 45%);
-    border: 1px solid $color-second-annex;
+    background: lighten($color-secondary, 45%);
+    border: 1px solid $color-secondary-darken;
     border-radius: 6px;
-    color: $color-second-darkest;
+    color: $color-secondary-darkest;
     display: inline-block;
     padding: 6px 12px;
     position: relative;
@@ -108,7 +181,7 @@ code {
 
     &::before {
       @extend %font-icon;
-      color: $color-second-annex;
+      color: $color-secondary-darken;
       font-size: $size-icon-code;
       left: -$margin-icon-size;
       position: absolute;
@@ -136,4 +209,11 @@ code {
       content: '4';
     }
   }
+}
+
+.color-primary {
+  color: $color-primary;
+}
+.color-secondary {
+  color: $color-secondary;
 }

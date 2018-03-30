@@ -1,0 +1,46 @@
+.navigation {
+  background: $color-white;
+  border-bottom: 1px solid $color-gray-lightest;
+  color: $color-text;
+  font-family: $font-title;
+  text-transform: uppercase;
+  @include text($font-size-xs, $font-size-base, $line-height-s);
+  a {
+    color: $color-text;
+    font-family: $font-title;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li:last-child {
+      flex: 1;
+      // background: $color-secondary;
+    }
+  }
+}
+
+.container-navigation {
+  display: block;
+  > * {
+    width: 100%;
+  }
+  @include mq(medium) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    > * {
+      width: 50%;
+    }
+  }
+  @include mq(xlarge) {
+    > * {
+      width: 25%;
+    }
+  }
+}
