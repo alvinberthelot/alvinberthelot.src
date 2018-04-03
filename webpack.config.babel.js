@@ -70,11 +70,27 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/,
-        use: ['file-loader']
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[hash].[ext]',
+              publicPath: '../'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader']
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './fonts/[hash].[ext]',
+              publicPath: '../'
+            }
+          }
+        ]
       }
     ]
   },
@@ -100,25 +116,31 @@ module.exports = {
       filename: 'events.html',
       template: 'src/events.hbs'
     }),
+
+    // new HtmlWebpackPlugin({
+    //   filename: 'blog/pepper.html',
+    //   template: 'src/blog/pepper.hbs'
+    // }),
+
     new HtmlWebpackPlugin({
       filename: 'blog/ng-europe-2016.html',
-      template: 'src/blog/ng-europe-2016.md'
+      template: 'src/blog/ng-europe-2016/ng-europe-2016.hbs'
     }),
     new HtmlWebpackPlugin({
       filename: 'blog/lets-sketch-together.html',
-      template: 'src/blog/lets-sketch-together.md'
+      template: 'src/blog/lets-sketch-together/lets-sketch-together.hbs'
     }),
     new HtmlWebpackPlugin({
       filename: 'blog/sublime-text-preferences.html',
-      template: 'src/blog/sublime-text-preferences.md'
+      template: 'src/blog/sublime-text-preferences/sublime-text-preferences.hbs'
     }),
     new HtmlWebpackPlugin({
       filename: 'blog/pepper.html',
-      template: 'src/blog/pepper.md'
+      template: 'src/blog/pepper/pepper.hbs'
     }),
     new HtmlWebpackPlugin({
       filename: 'blog/vorlon-js.html',
-      template: 'src/blog/vorlon-js.md'
+      template: 'src/blog/vorlon-js/vorlon-js.hbs'
     }),
     new CnameWebpackPlugin({
       domain: 'alvin.berthelot.rocks'

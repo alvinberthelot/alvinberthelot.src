@@ -30,7 +30,7 @@ C'est bien, cela vous permettra de couvrir un pourcentage significatif d'utilisa
 
 Donc potentiellement vous allez recevoir des anomalies en production qui se sont produites sur des _devices_ hétérogènes à votre parc.
 
-![](/content/images/2016/11/remote_debug-1.png)
+![](remote_debug.png)
 
 Si vous arrivez à reproduire une anomalie sans le _device_ mentionné, vous devriez vous en sortir. Là où c'est plus problématique c'est lorsque ce n'est pas le cas.
 
@@ -54,10 +54,10 @@ Ensuite chaque navigateur exécutant cette application web (en ouvrant l'URL app
 
 Communication qui permettra l'injection de scripts de façon dynamique.
 
-![](/content/images/2016/11/fonctionnement-2.png)
+![](fonctionnement.png)
 Le serveur Vorlon.JS disposant d'un dashboard (une IHM web), on va déjà pouvoir lister tous les clients (combo _device_/navigateur) qui ont souscrits.
 
-![](/content/images/2016/11/liste_devices-2-1.png)
+![](liste_devices.png)
 
 Ainsi dans mon exemple, on voit dans le dashboard que 4 clients ont souscrit à ma page :
 
@@ -68,12 +68,12 @@ Ainsi dans mon exemple, on voit dans le dashboard que 4 clients ont souscrit à 
 
 En sélectionnant un client, on accède aux outils directement à distance. Ils sont disponibles dans 2 fenêtres à onglets.
 
-![](/content/images/2016/11/layout_bottom.png)
+![](layout_bottom.png)
 
 * **Interactive console** : pour exécuter directement du JavaScript
 * **Modernizr** : pour afficher les possibilités du navigateur, possibilités détecter via [Modernizr](https://modernizr.com/)
 
-![](/content/images/2016/11/layout_top-1.png)
+![](layout_top.png)
 
 * **DOM Explorer** : pour afficher le DOM et éventuellement le modifier
 * **Obj. Explorer** : pour afficher le scope global JavaScript du navigateur

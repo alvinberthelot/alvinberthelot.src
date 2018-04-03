@@ -12,7 +12,7 @@ Robot humanoïde / Web / tablette, c'est quoi le rapport entre tout ça ? Et en 
 
 Pepper est un robot humanoïde qui a pour vocation d'être un réel compagnon interactif plutôt qu'un simple robot effectuant des tâches répétitives.
 
-![](/content/images/2016/11/social_robot-1.png)
+![](social_robot.png)
 
 Pour être à la hauteur de ces espérances, il dispose de nombreux atouts :
 
@@ -24,7 +24,7 @@ Pour être à la hauteur de ces espérances, il dispose de nombreux atouts :
 
 Ce qui nous intéresse plus particulièrement chez [Webyousoon](http://www.webyousoon.com), c'est bien évidemment le dernier point, sa tablette tactile.
 
-![](/content/images/2016/11/device-pepper.png)
+![](device-pepper.png)
 
 Pour autant cette tablette n'a pas plus d'intérêt que les autres si celle-ci n'est pas associée aux autres facultés de Pepper.
 
@@ -42,7 +42,7 @@ C'est déjà mieux, mais cela reste très limité, car **pour obtenir la meilleu
 
 Surtout il doit **être capable de faire tout cela de manière orchestrée**. Or le seul orchestrateur pouvant à la fois animer le robot, afficher les contenus sur la tablette, détecter les interactions des clients et interroger le back-end, c'est **le robot lui même et plus particulièrement son OS : [NAOqi OS](https://www.aldebaran.com/fr/solution-robotique/logiciel-robot/nao)**.
 
-![](/content/images/2016/11/orchestrator.png)
+![](orchestrator.png)
 
 Ainsi **contrairement à une application mobile classique, ce n'est pas elle qui pilote son comportement**, elle ne fait que souscrire à des événements et remonter d'autres événements. C'est un cas typique de [programmation événementielle](https://fr.wikipedia.org/wiki/Programmation_%C3%A9v%C3%A9nementielle).
 
@@ -60,7 +60,7 @@ Il existe plusieurs raisons laissant à penser que la tendance Pepper va percer 
 * On parle régulièrement des révolutions de l'IoT (_Internet of Things_) et de la robotique. Force est de constater que Pepper est aujourd'hui le seul **objet autonome** accessible au grand public disposant de tant de capteurs.
 * Dernière raison, et non des moindres, les usines dédiées se sont considérablement agrandies et modernisées et laissent entrevoir une **production de masse**.
 
-![](/content/images/2016/11/pepper-production.png)
+![](pepper-production.png)
 
 La vente de Pepper au grand public français n'a pas encore été officialisée, mais cela devrait être la suite logique des choses au vu du déploiement qui s'est opéré au Japon.
 
