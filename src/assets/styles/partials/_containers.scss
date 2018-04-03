@@ -1,0 +1,19 @@
+.container {
+  background: $color-bg;
+  color: $color-text;
+}
+
+.container-inverse {
+  background: $color-bg-inverse;
+  color: $color-text-inverse;
+}
+
+.container--secondary {
+  background: $color-secondary;
+  color: $color-secondary-darkest;
+}
+
+.container--light {
+  background: $color-gray-lightest;
+  color: $color-gray-darker;
+}

@@ -4,6 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
 // const SitemapPlugin = require('sitemap-webpack-plugin')
 import SitemapPlugin from 'sitemap-webpack-plugin'
+const marked = require('marked')
+const renderer = new marked.Renderer()
 
 const paths = [
   {
@@ -30,6 +32,21 @@ module.exports = {
         use: {
           loader: 'html-loader?interpolate'
         }
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'markdown-loader',
+            options: {
+              pedantic: true,
+              renderer
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
@@ -82,6 +99,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'events.html',
       template: 'src/events.hbs'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'blog/ng-europe-2016.html',
+      template: 'src/blog/ng-europe-2016.md'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'blog/lets-sketch-together.html',
+      template: 'src/blog/lets-sketch-together.md'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'blog/sublime-text-preferences.html',
+      template: 'src/blog/sublime-text-preferences.md'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'blog/pepper.html',
+      template: 'src/blog/pepper.md'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'blog/vorlon-js.html',
+      template: 'src/blog/vorlon-js.md'
     }),
     new CnameWebpackPlugin({
       domain: 'alvin.berthelot.rocks'
