@@ -69,8 +69,20 @@ $text-font-sizes: (
   xxl: $font-size-xxl
 );
 
-.text--light {
+.text--size-s {
+  @include text($font-size-s, $font-size-base, $line-height-s);
+}
+
+.text--bold {
+  font-family: $font-bold;
+}
+
+.text--color-light {
   color: $color-gray-lighter;
+}
+
+.text--color-lighest {
+  color: $color-gray-lightest;
 }
 
 .text--handwriting {
@@ -121,6 +133,12 @@ h6,
 .h--page {
   color: $color-gray-lightest;
   text-transform: uppercase;
+}
+
+.h--huge {
+  font-family: $font-title;
+  text-transform: uppercase;
+  @include text(100px, $font-size-base, $line-height-xl);
 }
 
 @each $title, $font-size in $title-font-sizes {

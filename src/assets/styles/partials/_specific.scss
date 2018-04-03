@@ -23,3 +23,37 @@
 
 .band--secondary {
 }
+
+.container-flex--focus {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  > * {
+    width: 100%;
+  }
+  @include mq(small) {
+    > * {
+      width: 100%;
+    }
+  }
+  @include mq(medium) {
+    > * {
+      width: 50%;
+    }
+  }
+  @include mq(xlarge) {
+    > * {
+      width: 25%;
+    }
+  }
+  @include mq(xxlarge) {
+    > * {
+      width: 20%;
+    }
+  }
+}
+
+.title--band {
+  padding-top: -50px;
+}
