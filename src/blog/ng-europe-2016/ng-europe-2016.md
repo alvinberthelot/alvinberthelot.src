@@ -2,7 +2,7 @@
 
 Petit retour personnel sur la conférence [ng-europe](https://ngeurope.org) ; la conférence européenne à propos d'[Angular](https://angularjs.org/) ; qui s'est déroulée sur 3 jours à Paris du 24 au 26 octobre 2016.
 
-##Jour 1 : workshop
+## Jour 1 : workshop
 
 L'objectif du workshop "**From zero to hero: Build cross-platform solutions with Angular 2**" auquel j'ai participé était de faire réaliser aux participants une application Angular 2 capable de s'executer en tant qu'application web, mobile (Android, iOS, Windows Phone) et desktop (Linux, MacOS, Windows) avec une même base de code.
 
