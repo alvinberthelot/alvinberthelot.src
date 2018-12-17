@@ -2,7 +2,7 @@
   "name": "alvinberthelot.src",
   "description": "Alvin BERTHELOT personnal website",
   "author": "Alvin Berthelot",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/alvinberthelot/alvinberthelot.src"
@@ -21,7 +21,7 @@
     "file-loader": "1.1.11",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.1.0",
-    "node-sass": "4.8.3",
+    "node-sass": "4.11.0",
     "nodemon": "1.17.2",
     "sass-loader": "6.0.7",
     "sitemap-webpack-plugin": "0.6.0",
